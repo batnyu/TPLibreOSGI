@@ -1,0 +1,31 @@
+package edu.magasin.magasin;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.osgi.service.component.annotations.Component;
+
+import edu.magasin.api.ClientAPI;
+import edu.magasin.api.ListeProduits;
+import edu.magasin.api.MagasinCoteClient;
+import edu.magasin.api.Produit;
+
+@Component
+public class Magasin implements MagasinCoteClient {
+
+	private ListeProduits listeProduits = new ListeProduits();
+	private List<ClientAPI> clients = new ArrayList<ClientAPI>();
+	
+	@Override
+	public void achatProduit(Produit produit, int quantite) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ListeProduits getListeProduits() {
+		return this.listeProduits;
+	}
+	
+	
+}

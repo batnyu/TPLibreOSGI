@@ -1,0 +1,11 @@
+# List of external plug-in models previously loaded. Timestamp: 1528622826015
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.apache.felix.gogo.command_0.10.0.v201209301215.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.apache.felix.gogo.runtime_0.10.0.v201209301036.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.apache.felix.gogo.shell_0.10.0.v201212101605.jar
+file:/C:/tp_osgi/felix-framework-4.6.0/SCR/org.apache.felix.scr-1.8.2.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.eclipse.equinox.console_1.1.100.v20141023-1406.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.eclipse.equinox.ds_1.4.300.v20150423-1356.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.eclipse.equinox.event_1.3.100.v20140115-1647.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.eclipse.equinox.util_1.0.500.v20130404-1337.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.eclipse.osgi_3.10.102.v20160118-1700.jar
+file:/C:/tp_osgi/eclipseE4Tools/plugins/org.eclipse.osgi.services_3.5.0.v20150519-2006.jar

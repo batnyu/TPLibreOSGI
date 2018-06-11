@@ -1,0 +1,7 @@
+1528552233297	Rename compilation unit 'ListeProduit.java'
+1528552325404	Encapsulate field 'produits'
+1528552460890	Rename compilation unit 'Client.java'
+1528556872750	Rename type 'MagasinClientAPI'
+1528559774051	Rename type 'MagasinClient'
+1528562060271	Rename method 'achatProduit'
+1528562501532	Rename type 'VentreProduitException'

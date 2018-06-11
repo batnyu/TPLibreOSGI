@@ -1,0 +1,11 @@
+package edu.magasin.magasin;
+
+import org.osgi.service.component.annotations.Component;
+
+import edu.magasin.api.MagasinCoteClient;
+
+@Component
+public class Magasin implements MagasinCoteClient{
+	
+	
+}

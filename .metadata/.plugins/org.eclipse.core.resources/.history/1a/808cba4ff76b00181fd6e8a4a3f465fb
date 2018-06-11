@@ -1,0 +1,16 @@
+package edu.magasin.client;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.osgi.service.component.annotations.Component;
+
+import edu.magasin.api.Produit;
+
+@Component(factory = "edu.magasin.client.factory")
+public class Client {
+	
+	private String nom;
+
+	private List<Produit> produitsAchetes = new ArrayList<Produit>();
+}

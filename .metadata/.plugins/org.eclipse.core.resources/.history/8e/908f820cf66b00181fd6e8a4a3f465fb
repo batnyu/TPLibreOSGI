@@ -1,0 +1,6 @@
+package edu.magasin.api;
+
+public interface MagasinClientAPI {
+	
+	public void achatProduit(Produit produit, int quantite);
+}

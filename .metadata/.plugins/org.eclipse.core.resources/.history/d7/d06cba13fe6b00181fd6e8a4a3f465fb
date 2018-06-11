@@ -1,0 +1,27 @@
+package edu.magasin.magasin;
+
+import org.osgi.service.component.annotations.Component;
+
+import edu.magasin.api.ListeProduits;
+import edu.magasin.api.MagasinCoteClient;
+import edu.magasin.api.Produit;
+
+@Component
+public class Magasin implements MagasinCoteClient {
+
+	private ListeProduits listeProduits;
+	
+	@Override
+	public void achatProduit(Produit produit, int quantite) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ListeProduits getListeProduits() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

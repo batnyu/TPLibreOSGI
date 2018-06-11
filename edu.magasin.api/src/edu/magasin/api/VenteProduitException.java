@@ -1,0 +1,14 @@
+package edu.magasin.api;
+
+public class VenteProduitException extends Exception {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public VenteProduitException(String arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+}

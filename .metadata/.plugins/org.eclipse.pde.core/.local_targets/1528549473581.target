@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="New Target" sequenceNumber="23">
+<locations>
+<location path="C:\tp_osgi\felix-framework-4.6.0\bin" type="Directory"/>
+<location path="C:\tp_osgi\felix-framework-4.6.0\bundle" type="Directory"/>
+<location path="C:\tp_osgi\eclipseE4Tools\plugins" type="Directory"/>
+<location path="C:\tp_osgi\felix-framework-4.6.0\SCR" type="Directory"/>
+</locations>
+<includeBundles>
+<plugin id="org.apache.felix.gogo.command" version="0.10.0.v201209301215"/>
+<plugin id="org.apache.felix.gogo.runtime" version="0.10.0.v201209301036"/>
+<plugin id="org.apache.felix.gogo.shell" version="0.10.0.v201212101605"/>
+<plugin id="org.apache.felix.scr"/>
+<plugin id="org.eclipse.equinox.console"/>
+<plugin id="org.eclipse.equinox.ds"/>
+<plugin id="org.eclipse.equinox.event"/>
+<plugin id="org.eclipse.equinox.util"/>
+<plugin id="org.eclipse.osgi"/>
+<plugin id="org.eclipse.osgi.services"/>
+</includeBundles>
+</target>

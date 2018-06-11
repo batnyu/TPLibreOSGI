@@ -1,0 +1,13 @@
+package edu.magasin.api;
+
+public interface ClientAPI {
+	
+	public ListeProduits getListeProduits();
+	
+	public void acheterProduit(Produit produit, int quantite);
+	
+	public String getNom();
+	
+	public double getPrixTotalAchats();
+	
+}

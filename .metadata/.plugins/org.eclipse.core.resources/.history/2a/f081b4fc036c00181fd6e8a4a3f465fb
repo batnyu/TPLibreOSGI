@@ -1,0 +1,9 @@
+package edu.magasin.api;
+
+public class VentreProduitException extends Exception {
+
+	public VentreProduitException(String arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+}

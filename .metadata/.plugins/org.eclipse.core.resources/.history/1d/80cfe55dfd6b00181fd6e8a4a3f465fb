@@ -1,0 +1,71 @@
+package edu.magasin.client;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
+
+import edu.magasin.api.ClientAPI;
+import edu.magasin.api.ListeProduits;
+import edu.magasin.api.MagasinClient;
+import edu.magasin.api.Produit;
+
+@Component(factory = "edu.magasin.client.factory")
+public class Client implements ClientAPI {
+	
+	private String nom;
+	
+	private MagasinClient magasinClient;
+
+	private List<Produit> produitsAchetes = new ArrayList<Produit>();
+	
+	@Activate
+	public void onStart(){
+		
+	}
+	
+	@Reference(
+			service = MagasinClient.class, 
+			cardinality = ReferenceCardinality.MANDATORY,
+			unbind = "unbindMagasinClient",
+			policy = ReferencePolicy.DYNAMIC
+			)
+	public void bindMagasinClient(MagasinClient magasinClient){
+		this.magasinClient = magasinClient;
+	}
+	
+	public void unbindMagasinClient(MagasinClient magasinClient){
+		this.magasinClient = null;
+	}
+
+	@Override
+	public ListeProduits getListeProduits() {
+		return this.magasinClient.getListeProduits();
+	}
+
+	@Override
+	public void acheterProduit(Produit produit, int quantite) {
+		this.magasinClient.achatProduit(produit, quantite);
+		
+		Produit nouveauProduit = new Produit(produit.getId(),produit.getLibelle(),produit.getPrix(),quantite);
+		this.produitsAchetes.add(nouveauProduit);
+		
+	}
+
+	@Override
+	public String getNom() {
+		return this.nom;
+	}
+
+	@Override
+	public double getPrixTotalAchats() {
+		Double total = (double) 0;
+		for(Produit produit : this.produitsAchetes){
+			total = total + produit.getPrix() * produit.getQuantite();
+		}
+		return total;
+	}
+}

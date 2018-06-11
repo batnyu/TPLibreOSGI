@@ -1,0 +1,35 @@
+package edu.magasin.client;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
+
+import edu.magasin.api.MagasinClient;
+import edu.magasin.api.Produit;
+
+@Component(factory = "edu.magasin.client.factory")
+public class Client {
+	
+	private String nom;
+	
+	private MagasinClient magasinClient;
+
+	private List<Produit> produitsAchetes = new ArrayList<Produit>();
+	
+	@Reference(
+			service = MagasinClient.class, 
+			cardinality = ReferenceCardinality.MANDATORY,
+			unbind = "unbindMagasinClient",
+			policy = ReferencePolicy.DYNAMIC
+			)
+	public void bindMagasinClient(MagasinClient magasinClient){
+		this.magasinClient = magasinClient;
+	}
+	
+	public void unbindMagasinClient(MagasinClient magasinClient){
+		this.magasinClient = null;
+	}
+}

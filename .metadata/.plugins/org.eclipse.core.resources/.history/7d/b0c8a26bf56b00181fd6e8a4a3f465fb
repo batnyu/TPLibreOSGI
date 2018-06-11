@@ -1,0 +1,8 @@
+package edu.magasin.client;
+
+import org.osgi.service.component.annotations.Component;
+
+@Component(factory = "edu.magasin.client.factory")
+public class Client {
+
+}

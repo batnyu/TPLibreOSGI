@@ -1,0 +1,9 @@
+package edu.magasin.api;
+
+public class Produit {
+
+	private int id;
+	private String libelle;
+	private double prix;
+	private int quantite;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Observable"/>
+<fullyQualifiedTypeName name="edu.magasin.api.Produit"/>
+<fullyQualifiedTypeName name="edu.magasin.api.MagasinClient"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.Activate"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.Component"/>
+<fullyQualifiedTypeName name="edu.magasin.api.MagasinCoteClient"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="edu.magasin.api.ClientAPI"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.ReferenceCardinality"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.ReferencePolicy"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.Reference"/>
+<fullyQualifiedTypeName name="edu.magasin.api.VenteProduitException"/>
+</qualifiedTypeNameHistroy>
