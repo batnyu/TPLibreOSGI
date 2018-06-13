@@ -1,0 +1,37 @@
+package edu.store.command;
+
+import org.osgi.service.component.ComponentFactory;
+import org.osgi.service.component.ComponentInstance;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+
+import edu.store.api.ClientStore;
+
+@Component(
+	    property= {
+	        "osgi.command.scope=edu",
+	        "osgi.command.function=test"},
+	    service=Command.class
+	)
+public class Command {
+	
+    @Reference(
+    		target = "(component.factory=edu.magasin.client.factory)",
+    		cardinality = ReferenceCardinality.MULTIPLE,)
+    private ComponentFactory factory;
+    
+ 
+    public void shoot(String target) {
+        // create a new service instance
+        ComponentInstance instance = this.factory.newInstance(null);
+        ClientStore clientStore = (ClientStore) instance.getInstance();
+        try {
+            //clientStore.shoot(target);
+            System.out.println("SALUT JE SUIS UN CLIENT");
+        } finally {
+            // destroy the service instance
+            instance.dispose();
+        }
+    }
+}

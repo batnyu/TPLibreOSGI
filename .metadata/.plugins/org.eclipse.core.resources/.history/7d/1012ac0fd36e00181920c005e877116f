@@ -1,0 +1,11 @@
+package edu.store.command;
+
+@Component(
+	    property= {
+	        "osgi.command.scope=fipro",
+	        "osgi.command.function=shoot"},
+	    service=ShootCommand.class
+	)
+public class Command {
+
+}

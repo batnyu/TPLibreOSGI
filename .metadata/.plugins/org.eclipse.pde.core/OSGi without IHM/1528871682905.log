@@ -1,0 +1,60 @@
+!SESSION 2018-06-13 08:34:42.728 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Command-line arguments:  -dev file:C:/tp_osgi/workspaces/TPLibre/.metadata/.plugins/org.eclipse.pde.core/OSGi without IHM/dev.properties -os win32 -ws win32 -arch x86 -consoleLog -console
+
+!ENTRY edu.store.command 4 0 2018-06-13 08:34:47.617
+!MESSAGE [edu.store.command.Command(3)] Error during instantiation of the implementation object
+!STACK 0
+java.lang.Error: Unresolved compilation problem: 
+	The annotation @Reference is disallowed for this location
+
+	at edu.store.command.Command.<init>(Command.java:18)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createImplementationObject(SingleComponentManager.java:253)
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.createComponent(SingleComponentManager.java:127)
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:871)
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:838)
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:777)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.apache.felix.gogo.runtime.CommandProxy.getTarget(CommandProxy.java:50)
+	at org.apache.felix.gogo.runtime.CommandProxy.execute(CommandProxy.java:72)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:477)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:403)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.felix.gogo.shell.Console.run(Console.java:62)
+	at org.apache.felix.gogo.shell.Shell.console(Shell.java:203)
+	at org.apache.felix.gogo.shell.Shell.gosh(Shell.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.felix.gogo.runtime.Reflective.invoke(Reflective.java:137)
+	at org.apache.felix.gogo.runtime.CommandProxy.execute(CommandProxy.java:82)
+	at org.apache.felix.gogo.runtime.Closure.executeCmd(Closure.java:477)
+	at org.apache.felix.gogo.runtime.Closure.executeStatement(Closure.java:403)
+	at org.apache.felix.gogo.runtime.Pipe.run(Pipe.java:108)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:183)
+	at org.apache.felix.gogo.runtime.Closure.execute(Closure.java:120)
+	at org.apache.felix.gogo.runtime.CommandSessionImpl.execute(CommandSessionImpl.java:89)
+	at org.apache.felix.gogo.shell.Activator.run(Activator.java:75)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY edu.store.command 4 0 2018-06-13 08:34:47.630
+!MESSAGE [edu.store.command.Command(3)] Failed creating the component instance; see log for reason

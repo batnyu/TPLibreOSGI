@@ -2,3 +2,4 @@
 1528870639727	Rename field 'magasinClient'
 1528870656122	Rename field 'produitsAchetes'
 1528870736125	Rename local variable 'nouveauProduit'
+1528872518206	Rename field 'nom'

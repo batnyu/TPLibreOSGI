@@ -3,6 +3,7 @@ package edu.store.client;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -15,18 +16,19 @@ import edu.store.api.StoreForClient;
 import edu.store.api.Product;
 import edu.store.api.SellProductException;
 
-@Component(factory = "edu.magasin.client.factory")
+@Component(factory = "edu.store.client.factory")
 public class Client implements ClientStore {
 	
-	private String nom;
+	private String name;
 	
 	private StoreForClient storeForClient;
 
 	private List<Product> boughtProducts = new ArrayList<Product>();
 	
 	@Activate
-	public void onStart(){
-		System.out.println("Un client est arrivé !");
+	public void onStart(ComponentContext myContext){
+		name = (String) myContext.getProperties().get("clientName");
+		System.out.println("Le client " + name  + " est arrivé !");
 	}
 	
 	@Reference(
@@ -59,7 +61,7 @@ public class Client implements ClientStore {
 
 	@Override
 	public String getName() {
-		return this.nom;
+		return this.name;
 	}
 
 	@Override

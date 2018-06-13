@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="edu.store.command.Command">
+   <property name="osgi.command.scope" value="edu"/>
+   <property name="osgi.command.function" value="test"/>
+   <service>
+      <provide interface="edu.store.command.Command"/>
+   </service>
+   <reference bind="bind" cardinality="0..n" interface="org.osgi.service.component.ComponentFactory" policy="dynamic" target="(component.factory=edu.magasin.client.factory)" unbind="unbind"/>
+   <implementation class="edu.store.command.Command"/>
+</scr:component>

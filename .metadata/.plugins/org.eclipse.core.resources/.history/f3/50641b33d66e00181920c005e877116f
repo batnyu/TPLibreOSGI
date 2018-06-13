@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="onStart" factory="edu.magasin.client.factory" name="edu.store.client.Client">
+   <service>
+      <provide interface="edu.store.api.ClientStore"/>
+   </service>
+   <reference bind="bindMagasinClient" cardinality="1..1" interface="edu.store.api.StoreForClient" name="MagasinClient" policy="dynamic" unbind="unbindMagasinClient"/>
+   <implementation class="edu.store.client.Client"/>
+</scr:component>

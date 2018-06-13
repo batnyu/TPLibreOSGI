@@ -22,5 +22,5 @@
 <booleanAttribute key="tracing" value="false"/>
 <booleanAttribute key="useCustomFeatures" value="false"/>
 <booleanAttribute key="useDefaultConfigArea" value="true"/>
-<stringAttribute key="workspace_bundles" value="edu.magasin.api@default:default,edu.magasin.client@default:default,edu.magasin.magasin@default:default"/>
+<stringAttribute key="workspace_bundles" value="edu.store.api@default:default,edu.store.client@default:default,edu.store.command@default:default,edu.store.store@default:default"/>
 </launchConfiguration>

@@ -1,6 +1,4 @@
 INDEX VERSION 1.127+C:\tp_osgi\workspaces\TPLibre\.metadata\.plugins\org.eclipse.jdt.core
-2742485262.index
 423824692.index
-3306034546.index
 678887466.index
-2983428077.index
+2742485262.index

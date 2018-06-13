@@ -1,0 +1,13 @@
+package edu.store.command;
+
+import org.osgi.service.component.annotations.Component;
+
+@Component(
+	    property= {
+	        "osgi.command.scope=edu",
+	        "osgi.command.function=test"},
+	    service=Command.class
+	)
+public class Command {
+
+}
