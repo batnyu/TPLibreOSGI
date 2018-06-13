@@ -1,0 +1,8 @@
+package edu.store.api;
+
+public interface MagasinCoteClient {
+	
+	public void vendreProduit(Product produit, int quantite) throws SellProductException;
+	
+	public ProductsList getListeProduits();
+}

@@ -1,0 +1,28 @@
+package edu.store.api;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+
+public class ProductsList extends Observable {
+
+	private List<Product> produits = new ArrayList<Product>();
+
+	public List<Product> getProduits() {
+		return produits;
+	}
+
+	public void setProduits(List<Product> produits) {
+		this.produits = produits;
+	}
+	
+	public void ajouterProduit(Product produit) {
+		this.produits.add(produit);
+		this.notifyChange();
+	}
+	
+	public void notifyChange() {
+		this.setChanged();
+		this.notifyObservers();
+	}
+}

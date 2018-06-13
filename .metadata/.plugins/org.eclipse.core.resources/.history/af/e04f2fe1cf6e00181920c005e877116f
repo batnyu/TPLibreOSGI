@@ -1,0 +1,66 @@
+package edu.magasin.magasin;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
+
+import edu.store.api.ClientAPI;
+import edu.store.api.ProductsList;
+import edu.store.api.StoreForClient;
+import edu.store.api.Product;
+import edu.store.api.SellProductException;
+
+@Component
+public class Magasin implements StoreForClient {
+
+	private ProductsList listeProduits = new ProductsList();
+	private List<ClientAPI> clients = new ArrayList<ClientAPI>();
+	
+	@Activate
+	public void onStart(){
+		System.out.println("Magasin créé !");
+	}
+	
+	@Reference(
+			service = ClientAPI.class,
+			cardinality = ReferenceCardinality.MULTIPLE,
+			policy = ReferencePolicy.DYNAMIC
+	)
+	public void bindClient(ClientAPI client) {
+		this.clients.add(client);
+	}
+	
+	public void unbindClient(ClientAPI client) {
+		this.clients.remove(client);
+	}
+	
+	@Override
+	public ProductsList getListeProduits() {
+		return this.listeProduits;
+	}
+
+	@Override
+	public void vendreProduit(Product produit, int quantite) throws SellProductException {
+		Product produitAVendre = null;
+		for(Product aProduit : this.listeProduits.getProduits()) {
+			if(produit.getId() == aProduit.getId()) {
+				produitAVendre = aProduit;
+				break;
+			}
+		}
+		
+		if(produitAVendre.getQuantite() > quantite || produitAVendre == null) {
+			throw new SellProductException("Le produit n'a plus de stock ou n'existe pas.");
+		}
+		
+		produitAVendre.setQuantite(produitAVendre.getQuantite() - quantite);
+		listeProduits.notifyChange();
+	}
+	
+	
+}

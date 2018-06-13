@@ -1,0 +1,13 @@
+package edu.store.api;
+
+public interface ClientAPI {
+	
+	public ProductsList getListeProduits();
+	
+	public void acheterProduit(Produit produit, int quantite) throws VenteProduitException;
+	
+	public String getNom();
+	
+	public double getPrixTotalAchats();
+	
+}
